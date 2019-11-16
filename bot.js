@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var prefix = "1"
 var adminprefix = '1'
 
+ //broadcast
 
 client.on("message", message => {
     if (message.content.startsWith("1bc")) {
@@ -16,7 +17,28 @@ client.on("message", message => {
   message.delete();
   };
   });
+
+
+ //online broadcast
+
+ var prefix = "1";
+
+  client.on("message", message => {
   
+              if (message.content.startsWith(prefix + "obc")) {
+                           if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+    let args = message.content.split(" ").slice(1);
+    var argresult = args.join(' '); 
+    message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+   m.send(`${argresult}\n ${m}`);
+  })
+   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `); 
+   message.delete(); 
+  };     
+  });
+
+
+ //status
   
 const developers = ["594419926899359746","381467210318610432"]
 client.on('message', message => {
