@@ -33,7 +33,7 @@ client.on("message", message => {
    m.send(`${argresult}\n ${m}`);
   })
    message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `); 
-   message.delete(1); 
+   message.delete(); 
   };     
   });
 
