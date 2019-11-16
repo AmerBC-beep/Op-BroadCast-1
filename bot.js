@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "$"
-var adminprefix = '$'
+var prefix = "1"
+var adminprefix = '1'
 
 
 client.on("message", message => {
-    if (message.content.startsWith("$bc")) {
+    if (message.content.startsWith("1bc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -19,14 +19,14 @@ client.on("message", message => {
   
   
   client.on('message', message => {
-   if (message.content.startsWith("$bc")) {
+   if (message.content.startsWith("1bc")) {
       message.delete(1000);
       message.channel.send(message.content.slice(5, message.content.length));
    }
 });
   
   
-const developers = ["472413769700474901","id"]
+const developers = ["594419926899359746","381467210318610432"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
