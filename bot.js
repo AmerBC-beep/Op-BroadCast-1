@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "3"
-var adminprefix = '3'
+var prefix = "5"
+var adminprefix = '5'
 
  //broadcast
 
 client.on("message", message => {
-    if (message.content.startsWith("3bc")) {
+    if (message.content.startsWith("5bc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -21,7 +21,7 @@ client.on("message", message => {
 
  //online broadcast
 
- var prefix = "3";
+ var prefix = "5";
 
   client.on("message", message => {
   
