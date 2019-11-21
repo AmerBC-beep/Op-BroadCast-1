@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "#"
-var adminprefix = '#'
+var prefix = "1"
+var adminprefix = '1'
 
 //BroadCast
 
 client.on("message", message => {
-    if (message.content.startsWith("#obc")) {
+    if (message.content.startsWith("1obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -20,7 +20,7 @@ client.on("message", message => {
 
 //BroadCast online
 
-  var prefix = "#";
+  var prefix = "1";
 
   client.on("message", message => {
   
